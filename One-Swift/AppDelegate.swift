@@ -8,6 +8,13 @@
 
 import UIKit
 
+/**
+ com.bmsoft.One-Swift
+    shareSDK:  
+        appkey: 2055f67ff7805    appsecret: 240c9e8bf4400a829b972a2cec3f15f6
+    wechat:
+        appkey: wx9fc8f2119becc89f appsecret: 989713f37362cc3900392ac570ce5478
+ */
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,9 +23,91 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        /** 初始化window*/
+        setupWindow()
+        
+        configNetWork()
+        
+        configTheme()
+        
+        configShareSDK()
+        
         return true
     }
 
+    private func setupWindow() {
+        window = UIWindow()
+        window?.frame = kScreenBounds
+        window?.backgroundColor = .white
+        window?.rootViewController = MainTabBarController()
+        window?.makeKeyAndVisible()
+    }
+    
+    
+    private func configNetWork() {
+        NetworkUtil.shared.isAutoEncode = true
+    }
+    
+    private func configTheme() {
+    
+        MyThemes.restoreLastTheme()
+        
+        UIApplication.shared.theme_setStatusBarStyle([.lightContent, .default], animated: true)
+        
+        let navigationBar = UINavigationBar.appearance()
+        let shadow = NSShadow()
+        shadow.shadowOffset = CGSize(width: 0, height: 0)
+        let titleAttributes: [String: AnyObject] = [
+            NSForegroundColorAttributeName: UIColor.black,
+            NSFontAttributeName: UIFont.systemFont(ofSize: 16),
+            NSShadowAttributeName: shadow
+        ]
+        
+        navigationBar.theme_tintColor = globalBarTextColorPicker
+        navigationBar.theme_barTintColor = globalBarTintColorPicker
+        navigationBar.titleTextAttributes = titleAttributes
+        
+        
+        let tabBar = UITabBar.appearance()
+        tabBar.theme_tintColor = globalBarTextColorPicker
+        tabBar.theme_barTintColor = globalBarTintColorPicker
+    }
+    
+    
+    private func configShareSDK() {
+    
+        ShareSDK.registerActivePlatforms([SSDKPlatformType.typeQQ.rawValue,
+                                          SSDKPlatformType.typeWechat.rawValue],
+                                         onImport: { (platform) in
+                                            switch platform
+                                            {
+                                            case SSDKPlatformType.typeWechat:
+                                                ShareSDKConnector.connectWeChat(WXApi.classForCoder())
+                                            default:
+                                                break
+                                            }
+        }) { (platform, appInfo) in
+            switch platform
+            {
+            
+            case SSDKPlatformType.typeWechat:
+                //设置微信应用信息
+                appInfo?.ssdkSetupWeChat(byAppId: "wx9fc8f2119becc89f",
+                                         appSecret: "989713f37362cc3900392ac570ce5478")
+
+            default:
+                break
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

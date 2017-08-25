@@ -1,0 +1,72 @@
+PODS:
+  - Alamofire (4.5.0)
+  - FDFullscreenPopGesture (1.1)
+  - FSPagerView (0.5.5)
+  - HandyJSON (1.7.2)
+  - Kingfisher (3.10.3)
+  - MJRefresh (3.1.12)
+  - Moya (8.0.5):
+    - Moya/Core (= 8.0.5)
+  - Moya/Core (8.0.5):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (8.0.5):
+    - Moya/Core
+    - RxSwift (~> 3.0)
+  - ObjectMapper (2.2.7)
+  - Result (3.2.3)
+  - RxCocoa (3.5.0):
+    - RxSwift (~> 3.4)
+  - RxDataSources (1.0.4):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.5.0)
+  - SnapKit (3.2.0)
+  - SVProgressHUD (2.1.2)
+  - SwiftDate (4.0.14)
+  - SwiftyJSON (3.1.4)
+  - Then (2.1.0)
+  - YYCache (1.0.4)
+
+DEPENDENCIES:
+  - FDFullscreenPopGesture (~> 1.1)
+  - FSPagerView
+  - HandyJSON
+  - Kingfisher
+  - MJRefresh
+  - Moya
+  - Moya/RxSwift
+  - ObjectMapper
+  - RxCocoa (~> 3.0)
+  - RxDataSources (~> 1.0)
+  - RxSwift (~> 3.0)
+  - SnapKit
+  - SVProgressHUD
+  - SwiftDate (~> 4.0.11)
+  - SwiftyJSON
+  - Then (~> 2.1.0)
+  - YYCache
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FSPagerView: 3ec72e6b201d77a48adab5ed1d33b43a8cc153d6
+  HandyJSON: e7ad0483005826baba1d1c251cd98d0aa8bd8cce
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
+  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
+  RxDataSources: b3389acc5fe2eefb8fcd81a2b76a876ad08bc82a
+  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SwiftDate: 4ef029fd3117cc287fe642658b9aca2217628976
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Then: 8496793c8fcac95482b943909b440724c7d8d82c
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+
+PODFILE CHECKSUM: 61adbede7eccc6e35e18a0831416a532e1692571
+
+COCOAPODS: 1.1.1

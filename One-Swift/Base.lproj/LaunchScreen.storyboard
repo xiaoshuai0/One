@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +21,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Cvw-u8-U3i">
+                                <rect key="frame" x="136.5" y="100" width="102" height="40"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fri" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-p3-a1k">
+                                <rect key="frame" x="87.5" y="216" width="200" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bdb-p3-a1k" secondAttribute="height" multiplier="251:295" id="NrK-ka-NGQ"/>
+                                    <constraint firstAttribute="width" constant="200" id="gTx-5v-8IB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cvw-u8-U3i" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2y2-e6-6mi"/>
+                            <constraint firstItem="bdb-p3-a1k" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="JQp-TX-CUY"/>
+                            <constraint firstItem="bdb-p3-a1k" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="KbH-uo-QPQ"/>
+                            <constraint firstItem="Cvw-u8-U3i" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="80" id="cXy-1Q-xMD"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Fri" width="502" height="590"/>
+        <image name="ad_logo" width="102" height="40"/>
+    </resources>
 </document>
