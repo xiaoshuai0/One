@@ -27,9 +27,9 @@ extension MainTabBarController {
     
     fileprivate func addChildViewController() {
         
-        setupChildViewController(OMeViewController(), image: "meUnselectedV4", selectedImage: "meSelectedV4")
         setupChildViewController(OHomeViewController(), image: "homeUnselectedV4", selectedImage: "homeSelectedV4")
         setupChildViewController(OALLViewController(), image: "allUnselectedV4", selectedImage: "allSelectedV4")
+        setupChildViewController(OMeViewController(), image: "meUnselectedV4", selectedImage: "meSelectedV4")
     }
     
     fileprivate func setupChildViewController(_ vc: BaseViewController, image: String, selectedImage: String) {

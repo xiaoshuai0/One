@@ -67,6 +67,7 @@ extension OHomeViewController {
         
         setupNav()
         setupTableView()
+        self.hideTabBar(tabBarController: self.tabBarController!)
     }
     
     fileprivate func setupNav() {
@@ -196,7 +197,11 @@ extension OHomeViewController: UIScrollViewDelegate {
         } else if alpha > 1 {
             alpha = 1
         }
-        
+        if offsetY <= 0 {
+            self.hideTabBar(tabBarController: self.tabBarController!)
+        } else {
+            self.showTabBar(tabBarController: self.tabBarController!)
+        }
         weatherView.alpha = 1 - alpha
         dateLabel.frame = CGRect(x: 0, y: 10 + 20 * alpha, width: kScreenWidth, height: 20)
     }
