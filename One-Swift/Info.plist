@@ -25,7 +25,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wx9fc8f2119becc89f</string>
+				<string>wxf66a047a97615a94</string>
 			</array>
 		</dict>
 	</array>
@@ -53,6 +53,50 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+        <string>wechat</string>
+        <string>weixin</string>
+        <string>mqqapi</string>
+        <string>mqq</string>
+        <string>mqqOpensdkSSoLogin</string>
+        <string>mqqconnect</string>
+        <string>mqqopensdkdataline</string>
+        <string>mqqopensdkgrouptribeshare</string>
+        <string>mqqopensdkfriend</string>
+        <string>mqqopensdkapi</string>
+        <string>mqqopensdkapiV2</string>
+        <string>mqqopensdkapiV3</string>
+        <string>mqqopensdkapiV4</string>
+        <string>mqzoneopensdk</string>
+        <string>wtloginmqq</string>
+        <string>wtloginmqq2</string>
+        <string>mqqwpa</string>
+        <string>mqzone</string>
+        <string>mqzonev2</string>
+        <string>mqzoneshare</string>
+        <string>wtloginqzone</string>
+        <string>mqzonewx</string>
+        <string>mqzoneopensdkapiV2</string>
+        <string>mqzoneopensdkapi19</string>
+        <string>mqzoneopensdkapi</string>
+        <string>mqqbrowser</string>
+        <string>mttbrowser</string>
+        <string>tim</string>
+        <string>timapi</string>
+        <string>timopensdkfriend</string>
+        <string>timwpa</string>
+        <string>timgamebindinggroup</string>
+        <string>timapiwallet</string>
+        <string>timOpensdkSSoLogin</string>
+        <string>wtlogintim</string>
+        <string>timopensdkgrouptribeshare</string>
+        <string>timopensdkapiV4</string>
+        <string>timgamebindinggroup</string>
+        <string>timopensdkdataline</string>
+        <string>wtlogintimV1</string>
+        <string>timapiV1</string>
 	</array>
 </dict>
 </plist>

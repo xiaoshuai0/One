@@ -10,7 +10,10 @@ import UIKit
 
 class OArticleViewController: BaseViewController {
 
-    var source_id: String?
+    var id: String?
+    var content_id: String?
+    var category: String?
+    
     fileprivate var ViewModel: OArticleViewModel!
     fileprivate var loadingView: UIImageView!
     fileprivate var lastOffsetY: CGFloat = 0
@@ -20,7 +23,7 @@ class OArticleViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        ViewModel = OArticleViewModel(sourceId: source_id!)
+        ViewModel = OArticleViewModel(category: category, id: content_id, content_id: id)
         self.title = "专题"
 
         webView = UIWebView().then {
@@ -36,7 +39,29 @@ class OArticleViewController: BaseViewController {
         
         let bottomView = OBottomView(frame: CGRect.init(x: 0, y: kScreenHeight - 44, width: kScreenWidth, height: 44))
         bottomView.shareAction = {
+            // 1.创建分享参数
+            let shareParames = NSMutableDictionary()
+            let model = self.ViewModel.detailDatas.value?.share_list?.wx_timeline
+            shareParames.ssdkSetupShareParams(byText: model?.desc,
+                                              images : [model?.imgUrl],
+                                              url : model?.link,
+                                              title : model?.title,
+                                              type : SSDKContentType.webPage)
             
+            //2.进行分享
+            ShareSDK.share(SSDKPlatformType.subTypeWechatTimeline, parameters: shareParames) { (state : SSDKResponseState, nil, entity : SSDKContentEntity?, error :Error?) in
+                
+                switch state{
+                    
+                case SSDKResponseState.success: print("分享成功")
+                case SSDKResponseState.fail:    print("授权失败,错误描述:\(error)")
+                case SSDKResponseState.cancel:  print("操作取消")
+                    
+                default:
+                    break
+                }
+                
+            }
         }
         self.view.addSubview(bottomView)
         loadingView = UIImageView().then{
@@ -50,7 +75,6 @@ class OArticleViewController: BaseViewController {
             
             self?.webView.loadHTMLString(model!.html_content, baseURL: nil)
             self?.webView.backgroundColor = UIColor.withHex(hexString: model!.bg_color)
-            bottomView.backgroundColor = UIColor.withHex(hexString: model!.bg_color)
         }).addDisposableTo(disposeBag)
     }
 

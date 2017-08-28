@@ -186,6 +186,31 @@ extension OHomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return 0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section > 1 {
+            let model = viewmodel.content_list[indexPath.section - 1]
+            kLog("\(model.id)---------\(model.content_id)")
+            let vc = OArticleViewController()
+            vc.id = model.id
+            vc.content_id = model.content_id
+            switch model.category {
+            case "1":
+                vc.category = "essay"
+            case "2":
+                vc.category = "serialcontent"
+            case "3":
+                vc.category = "question"
+            case "4":
+                vc.category = "music"
+            case "5":
+                vc.category = "movie"
+            default:
+                vc.category = ""
+            }
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 extension OHomeViewController: UIScrollViewDelegate {

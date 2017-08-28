@@ -10,9 +10,6 @@ import UIKit
 
 extension String {
     
-//    public func count() -> Int {
-//        return self.characters.count
-//    }
     
     public func trim() -> String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)

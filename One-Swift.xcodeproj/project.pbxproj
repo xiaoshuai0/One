@@ -138,6 +138,9 @@
 		DCDDA17A1F4E7D5900FDAAFD /* OAuthorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDA1761F4E7D5900FDAAFD /* OAuthorDetailViewController.swift */; };
 		DCDDA17C1F4E7DE400FDAAFD /* OAuthorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDA17B1F4E7DE400FDAAFD /* OAuthorHeaderView.swift */; };
 		DCDDA17F1F4EB00C00FDAAFD /* OAuthorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDDA17E1F4EB00C00FDAAFD /* OAuthorServices.swift */; };
+		DCEF36961F54013800A693E9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEF36951F54013800A693E9 /* SystemConfiguration.framework */; };
+		DCEF36981F54014100A693E9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEF36971F54014100A693E9 /* CoreTelephony.framework */; };
+		DCEF369A1F54015F00A693E9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEF36991F54015F00A693E9 /* libc++.tbd */; };
 		DCF27F991F384079007107C6 /* OHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF27F981F384079007107C6 /* OHomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -307,6 +310,9 @@
 		DCDDA1761F4E7D5900FDAAFD /* OAuthorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthorDetailViewController.swift; sourceTree = "<group>"; };
 		DCDDA17B1F4E7DE400FDAAFD /* OAuthorHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthorHeaderView.swift; sourceTree = "<group>"; };
 		DCDDA17E1F4EB00C00FDAAFD /* OAuthorServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthorServices.swift; sourceTree = "<group>"; };
+		DCEF36951F54013800A693E9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DCEF36971F54014100A693E9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DCEF36991F54015F00A693E9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		DCF27F981F384079007107C6 /* OHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OHomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,24 +321,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC6437101F4AD47800EEC03D /* MOBFoundation.framework in Frameworks */,
+				DC82D0B51F4ACEB1001BF7BE /* libz.tbd in Frameworks */,
+				DCEF369A1F54015F00A693E9 /* libc++.tbd in Frameworks */,
 				DC82D0BD1F4ACED5001BF7BE /* libsqlite3.tbd in Frameworks */,
+				DCEF36981F54014100A693E9 /* CoreTelephony.framework in Frameworks */,
+				DCEF36961F54013800A693E9 /* SystemConfiguration.framework in Frameworks */,
 				DC82D0BB1F4ACECD001BF7BE /* ImageIO.framework in Frameworks */,
+				DC82D0B91F4ACEC5001BF7BE /* JavaScriptCore.framework in Frameworks */,
+				DC82D0B71F4ACEBD001BF7BE /* libstdc++.tbd in Frameworks */,
+				DC82D0B31F4ACEA3001BF7BE /* libicucore.tbd in Frameworks */,
+				DC6437101F4AD47800EEC03D /* MOBFoundation.framework in Frameworks */,
 				DC6437171F4AD47800EEC03D /* CopyConnector.framework in Frameworks */,
 				DC6437191F4AD47800EEC03D /* SinaWeiboConnector.framework in Frameworks */,
 				DC6437181F4AD47800EEC03D /* QQConnector.framework in Frameworks */,
-				DC82D0B91F4ACEC5001BF7BE /* JavaScriptCore.framework in Frameworks */,
 				DC6437221F4AD47800EEC03D /* ShareSDKConnector.framework in Frameworks */,
 				DC64371B1F4AD47800EEC03D /* TencentOpenAPI.framework in Frameworks */,
-				DC82D0B71F4ACEBD001BF7BE /* libstdc++.tbd in Frameworks */,
 				DC6437131F4AD47800EEC03D /* ShareSDKConfigFile.framework in Frameworks */,
-				DC82D0B51F4ACEB1001BF7BE /* libz.tbd in Frameworks */,
 				DC6437161F4AD47800EEC03D /* ShareSDKUI.framework in Frameworks */,
 				DC64371F1F4AD47800EEC03D /* libWeChatSDK.a in Frameworks */,
 				DC6437111F4AD47800EEC03D /* ShareSDK.framework in Frameworks */,
 				DC64371D1F4AD47800EEC03D /* libWeiboSDK.a in Frameworks */,
 				DC64371A1F4AD47800EEC03D /* WechatConnector.framework in Frameworks */,
-				DC82D0B31F4ACEA3001BF7BE /* libicucore.tbd in Frameworks */,
 				DC6437141F4AD47800EEC03D /* ShareSDKExtension.framework in Frameworks */,
 				79BAC1644785E9E13C247E1B /* Pods_One_Swift.framework in Frameworks */,
 			);
@@ -1036,6 +1045,9 @@
 		F5016473D0E8B5CCFE4148D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCEF36991F54015F00A693E9 /* libc++.tbd */,
+				DCEF36971F54014100A693E9 /* CoreTelephony.framework */,
+				DCEF36951F54013800A693E9 /* SystemConfiguration.framework */,
 				DC82D0BC1F4ACED5001BF7BE /* libsqlite3.tbd */,
 				DC82D0BA1F4ACECD001BF7BE /* ImageIO.framework */,
 				DC82D0B81F4ACEC5001BF7BE /* JavaScriptCore.framework */,
@@ -1498,6 +1510,8 @@
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/PlatformConnector",
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/UMSocialSDK",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/UMSocialUI",
 				);
 				INFOPLIST_FILE = "One-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1505,8 +1519,52 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/UMSocialSDKPlugin",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bmsoft.NewsDemo;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"FDFullscreenPopGesture\"",
+					"-framework",
+					"\"FSPagerView\"",
+					"-framework",
+					"\"HandyJSON\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftDate\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"Then\"",
+					"-framework",
+					"\"YYCache\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bmsoft.One-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "One-Swift/APP/Class/Util/Global/One-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1529,6 +1587,8 @@
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/PlatformConnector",
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/UMSocialSDK",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/UMSocialUI",
 				);
 				INFOPLIST_FILE = "One-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1536,8 +1596,52 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK",
 					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/ShareSDK/ShareSDK/Support/PlatformSDK/WeChatSDK",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/One-Swift/APP/Class/Util/Lib/UMSocial/UMSocialSDKPlugin",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bmsoft.NewsDemo;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"FDFullscreenPopGesture\"",
+					"-framework",
+					"\"FSPagerView\"",
+					"-framework",
+					"\"HandyJSON\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SVProgressHUD\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftDate\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"Then\"",
+					"-framework",
+					"\"YYCache\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bmsoft.One-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "One-Swift/APP/Class/Util/Global/One-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

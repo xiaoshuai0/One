@@ -22,7 +22,7 @@ enum ApiManager {
     case allBannerUrl(String)
     case allQuestionUrl(String)
     case allTopic(String)
-    case topicDetail(String)
+    case topicDetail(String, String, String)
 }
 
 
@@ -44,8 +44,8 @@ extension ApiManager: TargetType {
             return "banner/list/5"
         case .allTopic:
             return "banner/list/4"
-        case .topicDetail:
-            return "topic/htmlcontent/7"
+        case let .topicDetail(topic , id,  _):
+            return "\(topic)/htmlcontent/\(id)"
         }
     }
     
@@ -90,9 +90,9 @@ extension ApiManager: TargetType {
                 "uuid":     "5B9F569B-8E21-413C-8602-E33BBD201525",
                 "version":  "v4.3.0"
             ]
-        case let .topicDetail(id):
+        case let .topicDetail(_, _, content_id):
             return [
-                "source_id": id,
+                "source_id": content_id,
                 "platform": "ios",
                 "sign":     "96fdd1425950625d286125cab4db758a",
                 "user_id":  "8225952",

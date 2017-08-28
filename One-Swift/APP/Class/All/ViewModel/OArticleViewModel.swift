@@ -16,8 +16,11 @@ class OArticleViewModel: NSObject {
     let disposeBag = DisposeBag()
     let provider = RxMoyaProvider<ApiManager>()
     var detailDatas: Variable<OTopicDetailModel?> = Variable(nil)
-    init(sourceId: String) {
-        let detail = provider.request(.topicDetail(sourceId)).mapModel(OTopicDetailModel.self)
+    init(category: String?, id: String?, content_id: String?) {
+        guard let id = id, let content_id = content_id, let category = category else {
+            return
+        }
+        let detail = provider.request(.topicDetail(category, id, content_id)).mapModel(OTopicDetailModel.self)
         detail.bind(to: detailDatas).disposed(by: disposeBag)
     }
     

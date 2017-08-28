@@ -112,7 +112,8 @@ extension OALLViewController {
             }
 
             let detailVC = OArticleViewController()
-            detailVC.source_id = "\(item.id)"
+            detailVC.id = "\(item.id)"
+            detailVC.content_id = "\(item.content_id)"
             strong.navigationController?.pushViewController(detailVC, animated: true)
         }
         tableView.tableHeaderView = bannerView
@@ -168,7 +169,9 @@ extension OALLViewController: UITableViewDelegate, UITableViewDataSource {
             } else {
                 model = server.topicData.value[indexPath.row - 3]
             }
-            detailVC.source_id = "\(String(describing: model?.id))"
+            detailVC.id = "\(String(describing: model?.id))"
+            detailVC.content_id = model?.content_id
+            detailVC.category = "topic"
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
